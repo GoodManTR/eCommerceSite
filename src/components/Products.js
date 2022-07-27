@@ -152,7 +152,7 @@ export default function Products() {
                                         id="price-all"
                                     />
                                     <label className="custom-control-label" htmlFor="price-all">
-                                        All Price
+                                        All Pric
                                     </label>
                                     <Badge className='border font-weight-normal'>168</Badge>
                                 </div>
