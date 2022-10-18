@@ -40,7 +40,7 @@ export default function PageMain() {
                             <div className="offer-text">
                                 <h6 className="text-white text-uppercase">Save 20%</h6>
                                 <h3 className="text-white mb-3">Special Offer</h3>
-                                <a href="" className="btn btn-primary">
+                                <a href="/products" className="btn btn-primary">
                                     Shop Now
                                 </a>
                             </div>
@@ -50,7 +50,7 @@ export default function PageMain() {
                             <div className="offer-text">
                                 <h6 className="text-white text-uppercase">Save 20%</h6>
                                 <h3 className="text-white mb-3">Special Offer</h3>
-                                <a href="" className="btn btn-primary">
+                                <a href="/products" className="btn btn-primary">
                                     Shop Now
                                 </a>
                             </div>
@@ -67,7 +67,7 @@ export default function PageMain() {
                 </h2>
                 <Row className='px-xl-5 pb-3'>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />
@@ -80,7 +80,7 @@ export default function PageMain() {
                         </a>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid myImage" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />
@@ -93,7 +93,7 @@ export default function PageMain() {
                         </a>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid myImage" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />
@@ -106,7 +106,7 @@ export default function PageMain() {
                         </a>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid myImage" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />
@@ -119,7 +119,7 @@ export default function PageMain() {
                         </a>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid myImage" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />
@@ -132,7 +132,7 @@ export default function PageMain() {
                         </a>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 pb-1">
-                        <a className="text-decoration-none" href="">
+                        <a className="text-decoration-none" href="/products">
                             <div className="cat-item d-flex align-items-center mb-4">
                                 <div className="overflow-hidden" style={{ width: 100, height: 100 }}>
                                     <img className="img-fluid myImage" src="https://firebasestorage.googleapis.com/v0/b/ihsanceyizpro.appspot.com/o/letter_c_PNG26.png?alt=media&token=25c109d3-db80-4e95-afd9-b783cf6ab993" alt="" />

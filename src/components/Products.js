@@ -3,7 +3,7 @@ import '../styles/main.css'
 import { ref, child, push, update, set, get, onValue } from "firebase/database";
 import { collection, query, where, onSnapshot, doc, getDoc, setDoc } from "firebase/firestore";
 import { auth, firestoreDb, realtimeDb } from '../firebase';
-import { Container, Row, Col, Breadcrumb, BreadcrumbItem, Badge, Image, Dropdown, DropdownButton, Offcanvas, Button } from 'react-bootstrap';
+import { Container, Row, Col, Breadcrumb, BreadcrumbItem, Badge, Image, Dropdown, DropdownButton, Offcanvas, Button, Toast, ToastContainer } from 'react-bootstrap';
 
 export default function Products() {
     let count
@@ -14,7 +14,9 @@ export default function Products() {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
+    const [show2, setShow2] = useState(false);
+    const [position, setPosition] = useState('top-start');
+    
     async function checkKey(itemId) {
         get(ref(realtimeDb, "users/" + auth.currentUser.uid + "/shopping_cart/" + itemId)).then((snapshot) => {
             if (snapshot.exists()) {
@@ -102,6 +104,7 @@ export default function Products() {
         }
         var itemId = shopItem.getElementsByClassName('itemId')[0].id
         writeNewPost(auth.currentUser.uid, itemId)
+        setShow2(true)
     }
 
     async function getItems() {
@@ -115,17 +118,19 @@ export default function Products() {
 
     useEffect(() => {
         getItems()
-        
+
     }, [])
 
     useEffect(() => {
         addToCartButton()
         ready()
-        
+
     })
 
     return (
         <>
+            
+
             <Container fluid>
                 <Row className='px-xl-5'>
                     <Col className="col-12">
@@ -140,6 +145,16 @@ export default function Products() {
             <Container fluid>
                 <Row className='px-xl-5'>
                     <Col lg="3" md="4" className='d-none d-lg-block d-md-block'>
+                        <ToastContainer>
+                            <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "absolute", top: 0, right: 0, margin: 20, opacity: 0.9 }} autohide>
+                                <Toast.Header>
+                                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                                    <strong className="me-auto">Sepet</strong>
+                                    <small className="text-muted">Şimdi</small>
+                                </Toast.Header>
+                                <Toast.Body>Ürün sepete eklendi.</Toast.Body>
+                            </Toast>
+                        </ToastContainer>
                         <h5 className="section-title position-relative text-uppercase mb-3">
                             <span className="pr-3">Filter by price</span>
                         </h5>

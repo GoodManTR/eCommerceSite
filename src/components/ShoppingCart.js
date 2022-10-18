@@ -5,7 +5,7 @@ import React, { useRef, useState, useEffect } from 'react'
 import { getDatabase, ref, child, get, update, set, remove, onValue, orderByChild } from "firebase/database";
 import { auth, firestoreDb, realtimeDb } from "../firebase"
 import { collection, query, where, onSnapshot, doc, getDoc, setDoc, deleteDoc, getDocs, deleteField, updateDoc } from "firebase/firestore";
-import { Container, Nav, Navbar, NavDropdown, Form, Button, Row, Col, Carousel, Breadcrumb, Table, BreadcrumbItem, ToastHeader, ToastBody, Modal } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Form, Button, Row, Col, Carousel, Breadcrumb, Table, BreadcrumbItem, ToastHeader, ToastBody, Modal, Toast, ToastContainer } from 'react-bootstrap';
 import { render } from 'react-dom';
 
 function MyVerticallyCenteredModal(props) {
@@ -48,6 +48,7 @@ export default function ShoppingCart() {
     const [error, setError] = useState('')
     const [modalShow, setModalShow] = useState(false);
     const [itemId, setItemId] = useState()
+    const [show2, setShow2] = useState(false);
     let count
 
     
@@ -222,7 +223,17 @@ export default function ShoppingCart() {
 
     return (
         <>
-      
+            <ToastContainer>
+                <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "absolute", top: 0, right: 0, margin: 20, opacity: 0.9 }}>
+                    <Toast.Header>
+                        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                        <strong className="me-auto">Sipariş</strong>
+                        <small className="text-muted">Şimdi</small>
+                    </Toast.Header>
+                    <Toast.Body>Siparişiniz alındı. <a href='/orders'>Buradan</a> kontrol edebilirsiniz.</Toast.Body>
+                </Toast>
+            </ToastContainer>
+
             <Container fluid>
                 <Row className='px-xl-5'>
                     <Col>
@@ -314,7 +325,10 @@ export default function ShoppingCart() {
                                     <h5>Toplam</h5>
                                     <h5>{(parseFloat(getTotal()) + 10).toFixed(2).replace('.',',')} TL</h5>
                                 </div>
-                                <button onClick={createOrder} type="submit" className="btn btn-block btn-primary font-weight-bold my-3 py-3">
+                                <button onClick={() => {
+                                    createOrder()
+                                    setShow2(true)
+                                }} type="submit" className="btn btn-block btn-primary font-weight-bold my-3 py-3">
                                     Sipariş Oluştur
                                 </button>
                             </div>
