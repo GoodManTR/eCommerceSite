@@ -224,7 +224,7 @@ export default function ShoppingCart() {
     return (
         <>
             <ToastContainer>
-                <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "absolute", top: 0, right: 0, margin: 20, opacity: 0.9 }}>
+                <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "absolute", top: 0, right: 0, margin: 20 }}>
                     <Toast.Header>
                         <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
                         <strong className="me-auto">Sipariş</strong>
