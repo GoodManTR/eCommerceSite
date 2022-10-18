@@ -350,7 +350,7 @@
 
 #results {
   position: absolute;
-  width: inherit;
+ 
   overflow-y: auto;
   max-height: 30vh;
   z-index: 100;
@@ -385,10 +385,15 @@
 }
 
 #search-bar {
-  width: inherit;
+
 }
 
 .ml-2,
 .mx-2 {
   margin-left: 0.5rem !important;
+}
+
+
+.myImageText {
+  margin-left: 1vh;
 }

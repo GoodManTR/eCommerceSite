@@ -278,9 +278,9 @@ export default function Header() {
                                 </Dropdown.Toggle>
 
                                 <Dropdown.Menu>
-                                    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-3" >Something else</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-1">Category Name 1</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">Category Name 2</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3" >Category Name 3</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown>
                         </Navbar.Brand>

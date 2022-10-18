@@ -13,9 +13,18 @@ export function AuthProvider( {children} ) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
-    
-    function signup(email, password) {
-        return auth.createUserWithEmailAndPassword(email, password)
+
+    async function signup(email, password) {
+        return await auth.createUserWithEmailAndPassword(email, password).then(() => {
+            //If a user is successfully created with an appropriate email
+            if (auth.currentUser != null) {
+                auth.currentUser.sendEmailVerification();
+            }
+        }).catch((error) => console.log(error));     
+    }
+
+    function verifyEmail() {
+        return auth.currentUser.sendEmailVerification()
     }
 
     function login (email, password) {

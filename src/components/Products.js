@@ -115,13 +115,14 @@ export default function Products() {
 
     useEffect(() => {
         getItems()
+        
     }, [])
 
     useEffect(() => {
         addToCartButton()
         ready()
+        
     })
-
 
     return (
         <>
@@ -152,7 +153,7 @@ export default function Products() {
                                         id="price-all"
                                     />
                                     <label className="custom-control-label" htmlFor="price-all">
-                                        All Pric
+                                        All Price
                                     </label>
                                     <Badge className='border font-weight-normal'>168</Badge>
                                 </div>
