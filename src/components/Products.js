@@ -146,7 +146,7 @@ export default function Products() {
                 <Row className='px-xl-5'>
                     <Col lg="3" md="4" className='d-none d-lg-block d-md-block'>
                         <ToastContainer>
-                            <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "absolute", top: 0, right: 0, margin: 20 }} autohide>
+                            <Toast bg='success' onClose={() => setShow2(false)} show={show2} delay={3000} style={{ position: "fixed", top: 0, right: 0, margin: 20, zIndex: 1000 }} autohide>
                                 <Toast.Header>
                                     <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
                                     <strong className="me-auto">Sepet</strong>
